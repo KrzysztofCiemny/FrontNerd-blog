@@ -9,7 +9,7 @@ const HeroSection = () => {
           <span>Be the Front Nerd</span>
         </h1>
         <p className="max-w-md text-heroPClamp text-slate-500">
-          FrontNerd to miejsce w którym publikowane są treści ze świata Front&#8209;endu i nie tylko.
+          FrontNerd to miejsce, w którym publikowane są treści ze świata Front&#8209;endu i nie tylko.
         </p>
         <LogosSlider />
       </div>
