@@ -26,7 +26,7 @@ const PostPage = async ({ params }: any) => {
         <Image src={post.data.images[1]} alt={post.data.alt} width={1984} height={1200} priority={true} className="postMax:rounded-lg h-auto" />
       </div>
       <div className="max-w-6xl px-mobileX lg:px-desktopX">
-        <article className="prose lg:prose-lg max-w-[60rem]">
+        <article className="prose lg:prose-lg max-w-[60rem] mb-10">
           <Markdown>{post.content}</Markdown>
         </article>
       </div>
