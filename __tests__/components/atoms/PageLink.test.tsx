@@ -1,11 +1,26 @@
 import PageLink from "@/components/atoms/pageLink/PageLink";
 import { render, screen } from "@testing-library/react";
 
-it('Correctly renders the PageLink component', () => {
-  render(<PageLink />);
+const props = {
+  children: 'Example Link',
+  to: '/example-page',
+  dark: true,
+};
 
-  const logo = screen.getByText('Frontnerd');
+describe('PageLink component', () => {
+  it('correctly renders the component', () => {
+    render(<PageLink {...props} />);
+    const linkElement = screen.getByRole('link');
 
-  expect(logo).toBeInTheDocument()
+    expect(linkElement).toHaveTextContent('Example Link');
 
+    expect(linkElement).toHaveClass('text-darkBlue');
+  });
+
+  it('directs to the right place', () => {
+    render(<PageLink {...props} />);
+    const linkElement = screen.getByRole('link');
+
+    expect(linkElement).toHaveAttribute('href', '/example-page');
+  });
 });
