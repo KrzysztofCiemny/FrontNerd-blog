@@ -1,5 +1,5 @@
 import Logo from "@/components/atoms/logo/Logo";
-import { getByRole, render, screen } from "@testing-library/react";
+import { render, screen } from "@testing-library/react";
 
 it('Correctly renders the Logo component', () => {
   render(<Logo />);
