@@ -12,7 +12,7 @@ const Navigation = ({ isMenuOpen, setIsMenuOpen }: MobileMenuOpen) => {
   }, [isMenuOpen]);
 
   return (
-    <nav className={`flex justify-center items-center z-[9] mobileMax:mobile-nav md:translate-x-0 ${isMenuOpen ? 'translate-x-0' : 'translate-x-[100vw]'}`}>
+    <nav className={`flex justify-center items-center z-[9] mobileMax:mobile-nav md:translate-x-0 ${isMenuOpen ? 'translate-x-0' : 'translate-x-[100vw]'}`} data-testId='navigation'>
       <ul className="flex flex-col gap-6 md:flex-row">
         <li className="group nav-link_container md:hidden">
           <Link href="/" className="nav-link" onClick={() => setIsMenuOpen(false)}>
