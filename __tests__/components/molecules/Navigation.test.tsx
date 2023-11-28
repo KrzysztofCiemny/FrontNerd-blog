@@ -1,5 +1,5 @@
 import Navigation from "@/components/molecules/navigation/Navigation";
-import { fireEvent, render, screen } from "@testing-library/react"
+import { render, screen } from "@testing-library/react"
 
 let isMenuOpen = false;
 const setIsMenuOpen = () => {
@@ -11,3 +11,9 @@ it('renders the component correctly', () => {
   expect(screen.getByTestId('navigation')).toBeInTheDocument();
 })
 
+it('renders navigation with correct links', () => {
+  render(<Navigation isMenuOpen={isMenuOpen} setIsMenuOpen={setIsMenuOpen} />)
+
+  expect(screen.getByText('Strona główna')).toHaveAttribute('href', '/');
+  expect(screen.getByText('Artykuły')).toHaveAttribute('href', '/posts');
+});
