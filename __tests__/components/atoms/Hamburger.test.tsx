@@ -7,7 +7,7 @@ const setIsMenuOpen = () => {
 };
 
 describe('Hamburger component', () => {
-  it('correctly renders the component', () => {
+  it('renders the component correctly', () => {
     render(<Hamburger isMenuOpen={isMenuOpen} setIsMenuOpen={setIsMenuOpen} />)
     expect(screen.getByTestId('hamburger')).toBeInTheDocument();
   })
