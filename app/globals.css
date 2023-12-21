@@ -8,6 +8,9 @@
   *:after {
     @apply box-border m-0 p-0
   }
+  p {
+    @apply tracking-wide
+  }
   .text-color-hover-animation {
     -webkit-text-fill-color: transparent;
   }
@@ -18,7 +21,7 @@
     @apply fixed top-0 left-0 w-screen h-screen transition-transform ease-in bg-lightBlue
   }
   .nav-link {
-    @apply no-underline text-3xl md:text-base font-semibold md:font-normal md:text-slate-600 hover:text-black ease-in duration-200
+    @apply no-underline text-3xl md:text-base tracking-wide font-semibold md:font-normal md:text-slate-600 hover:text-black ease-in duration-200
   }
   .nav-link_bottom-line {
     @apply absolute -bottom-1 left-0 w-0 h-px bg-darkBlue group-hover:w-full ease-in duration-200
