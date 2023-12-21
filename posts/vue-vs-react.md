@@ -20,7 +20,7 @@ alt: image with vue vs react logos
 
 **Framework jest to struktura lub zestaw bibliotek i narzędzi do języka programowania, który pozwala na tworzenie aplikacji w szybszy, bardziej efektywny, wydajniejszy i bezpieczniejszy sposób.** Frameworki bardzo ułatwiają pisanie kodu i czynią pracę przyjemną, a do tego są to potężne narzędzia umożliwiające tworzenie dużych aplikacji i skomplikowanych rozwiązań.
 
-W tym artykule skupiamy się na dwóch z trzech (trzeci to Angular, w którym nigdy nie pisałem i dlatego nie jest tu uzględniony) najbardziej popularnych frameworkaó frontendowych opartych na JavaScript.
+W tym artykule skupiamy się na dwóch z trzech (trzeci to Angular, w którym nigdy nie pisałem i dlatego nie jest tu uzględniony) najbardziej popularnych frameworków frontendowych opartych na JavaScript.
 
 ## Popularność
 
@@ -36,7 +36,7 @@ Jeżeli chodzi o **Vue to plasuję się on pod względem popularności na trzeci
 
 <img src="/images/blog/post3/postImages/imageOfMostUsedFrontendFrameworksChart.png" alt="Image of most used frontend frameworks" loading="lazy" style="border-radius: 0.5rem;"/>
 
-Jak widać czołówka trzyma się stabilnie od kilku lat (znalazłem wykres tylko do 2022, ale jestem przekonany że wielę się nie zmieniło), więc nie ma się co martwić że któraś z omawianych technologii straci na popularności.
+Jak widać, czołówka trzyma się stabilnie od kilku lat (znalazłem wykres tylko do 2022, ale jestem przekonany że wielę się nie zmieniło), więc nie ma się co martwić że któraś z omawianych technologii straci na popularności.
 
 ## Poziom trudności
 
