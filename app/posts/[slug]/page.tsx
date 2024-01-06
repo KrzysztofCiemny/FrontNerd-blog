@@ -3,16 +3,23 @@ import Markdown from "markdown-to-jsx";
 import Image from "next/image";
 import formatDate from "@/utils/formatDate";
 
-export const generateStaticParams = async () => {
-  const posts = await getPostMetadata();
+type PageParams = {
+  slug: string;
+};
+type PageProps = {
+  params: PageParams;
+};
+
+export const generateStaticParams = () => {
+  const posts = getPostMetadata();
   return posts.map((post) => ({
     slug: post.slug,
   }));
 };
 
-const PostPage = async ({ params }: any) => {
+const PostPage = ({ params }: PageProps) => {
   const slug = params.slug;
-  const post = await getPostContent(slug);
+  const post = getPostContent(slug);
 
   if (!post) {
     return <div>Coś poszło nie tak :/. Nie możemy wyświetlić danych posta.</div>
