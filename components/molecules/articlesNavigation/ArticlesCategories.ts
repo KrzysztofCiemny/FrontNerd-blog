@@ -1,1 +1,1 @@
-export const categories = ['Wszystko', 'Next', 'Git', 'Inne'];
+export const categories = ["Wszystko", "Next", "Git", "Inne"];
