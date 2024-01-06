@@ -1,6 +1,7 @@
 ---
 title: Jak używać gita? Czym jest i do czego służy?
 description: W tym artykule dowiesz się o tym czym jest i do czego służy git. Dowiesz się również jak go używać i nauczysz się podstawowych komend gita. Dzięki poznaniu podstaw gita twoja codzienna praca z kodem będzie dużo wydajniejsza.
+category: Git
 date: 2023-10-14
 author: Krzysztof Ciemny
 images:

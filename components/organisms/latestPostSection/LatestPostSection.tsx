@@ -1,10 +1,13 @@
 import PageLink from "@/components/atoms/pageLink/PageLink"
 import Image from "next/image"
 import Link from "next/link"
-import { getPostMetadata } from "@/utils/getPost"
+import { PostMetadata } from "@/models/models"
 
-const LatestPostSection = async () => {
-  const postMetadata = await getPostMetadata();
+type Props = {
+  postMetadata: PostMetadata[];
+}
+
+const LatestPostSection = ({ postMetadata }: Props) => {
   const [latestPostMetadata] = postMetadata;
 
   return (

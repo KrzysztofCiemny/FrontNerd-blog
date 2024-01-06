@@ -4,7 +4,8 @@ export interface PostMetadata {
   date: string;
   images: string[];
   slug: string;
-  alt: string
+  alt: string;
+  category: string;
 }
 
 export interface LogoBody {

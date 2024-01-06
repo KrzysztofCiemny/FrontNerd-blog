@@ -1,6 +1,7 @@
 ---
 title: Tworzenie bloga z użyciem Next.js i plików Markdown
 description: Kiedyś usłyszałem że każdy programista powinien mieć własnego bloga. Nie wiem czy się z tym zgadzam, ale wiem że jeden więcej projekt do CV i kolejna poznana technologia na pewno nie zaszkodzą. Dzisiaj stworzymy własnego bloga przy użyciu potężnej technologii jaką jest Next.js.
+category: Next
 date: 2023-08-30
 author: Krzysztof Ciemny
 images:

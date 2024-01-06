@@ -2,8 +2,8 @@ import { getPostMetadata } from "@/utils/getPost";
 import PostPreviewCard from "@/components/molecules/postPreviewCard/PostPreviewCard";
 import PageLink from "@/components/atoms/pageLink/PageLink";
 
-const LatestPostsSection = async () => {
-  const postMetadata = await getPostMetadata();
+const LatestPostsSection = () => {
+  const postMetadata = getPostMetadata();
   const latestThreePostsMetadata = postMetadata.slice(0, 3);
 
   return (
