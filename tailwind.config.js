@@ -35,6 +35,7 @@ module.exports = {
       fontSize: {
         heroHClamp: "clamp(2rem, 5vw, 3.5rem)",
         postTitleH2Clamp: "clamp(1.8rem, 3vw, 3.3rem)",
+        aboutMeTitleClamp: "clamp(1.4rem, 3vw, 2.6rem)",
         heroPClamp: "clamp(1.2rem, 2vw, 1.4rem)",
         postPClamp: "clamp(1rem, 2vw, 1.2rem)",
       },
