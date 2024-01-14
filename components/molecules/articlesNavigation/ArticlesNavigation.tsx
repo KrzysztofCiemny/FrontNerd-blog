@@ -1,6 +1,10 @@
 import { categories } from "./ArticlesCategories";
 
-const ArticlesNavigation = ({ onCategoryClick }: { onCategoryClick: (category: string) => void }) => {
+type Props = {
+  onCategoryClick: (category: string) => void
+}
+
+const ArticlesNavigation = ({ onCategoryClick }: Props) => {
   return (
     <ul className="flex flex-wrap gap-4 justify-center">
       {categories.map((category, index) => (

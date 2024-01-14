@@ -3,8 +3,9 @@
 import Image from "next/image"
 import Link from "next/link"
 import ArticlesNavigation from "@/components/molecules/articlesNavigation/ArticlesNavigation"
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import { PostMetadata } from "@/models/models"
+import revealElementsOnScroll from "@/utils/scrollAnimations"
 
 type Props = {
   postMetadata: PostMetadata[];
@@ -22,6 +23,10 @@ const AllArticlesSection = ({ postMetadata }: Props) => {
     setSelectedCategory(category);
   };
 
+  useEffect(() => {
+    revealElementsOnScroll()
+  }, [selectedCategory]);
+
   return (
     <section className="w-full my-mobileY lg:my-desktopY">
       <h2 className="text-sm font-medium uppercase mb-1 mt-8">Więcej artykułów</h2>
@@ -32,13 +37,13 @@ const AllArticlesSection = ({ postMetadata }: Props) => {
           return (
             <li key={post.slug}>
               <article className="flex flex-col">
-                <Link href={`/posts/${post.slug}`}>
+                <Link href={`/posts/${post.slug}`} className="reveal">
                   <h3 className="text-[1.8rem] font-semibold mb-4 leading-tight text-color-hover-animation">{post.title}</h3>
                 </Link>
-                <Link href={`/posts/${post.slug}`} className="-order-1">
+                <Link href={`/posts/${post.slug}`} className="-order-1 reveal">
                   <Image src={post.images[2]} alt={post.alt} width={1680} height={1200} className="rounded-lg h-auto mb-6 img-highlight" />
                 </Link>
-                <p className="text-slate-700 lg:text-lg leading-8">{post.description} </p>
+                <p className="text-slate-700 lg:text-lg leading-8 reveal">{post.description} </p>
               </article>
             </li>
           )

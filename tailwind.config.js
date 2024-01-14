@@ -10,9 +10,11 @@ module.exports = {
       colors: {
         veryLightBlue: "#F0F8FF",
         lightBlue: "#E6F3FF",
+        lightBlue2: "#d7e9fa",
         darkBlue: "#004D80",
         gray: "#5F666D",
         black: "#2B2A35",
+        lightBlack: "#2b2c32",
         transparent: "rgba(255, 255, 255, 0)",
         halfTransparentBlack: "rgba(0, 0, 0, 0.6)",
       },
@@ -25,6 +27,7 @@ module.exports = {
         mobileY: "2rem",
         desktopX: "5rem",
         desktopY: "5rem",
+        desktopY_Xl: "7rem",
         sliderShadowWidthClamp: "clamp(3rem, 2rem + 5vw, 6rem)",
         sliderLogoHeightClamp: "clamp(1.875rem, 1rem + 5vw, 3.125rem)",
         sliderLogoMarginClamp: "clamp(1.5rem, 1rem + 5vw, 3.3rem)",
@@ -35,6 +38,7 @@ module.exports = {
       fontSize: {
         heroHClamp: "clamp(2rem, 5vw, 3.5rem)",
         postTitleH2Clamp: "clamp(1.8rem, 3vw, 3.3rem)",
+        aboutMeTitleClamp: "clamp(1.4rem, 3vw, 2.6rem)",
         heroPClamp: "clamp(1.2rem, 2vw, 1.4rem)",
         postPClamp: "clamp(1rem, 2vw, 1.2rem)",
       },

@@ -1,5 +1,5 @@
-import LatestPostSection from "@/components/organisms/latestPostSection/LatestPostSection"
-import AllArticlesSection from "@/components/organisms/allArticlesSection/AllArticlesSection"
+import LatestPostSection from "@/components/pages/articlesPage/latestPostSection/LatestPostSection"
+import AllArticlesSection from "@/components/pages/articlesPage/allArticlesSection/AllArticlesSection"
 import { getPostMetadata } from "@/utils/getPost"
 
 const AllPosts = () => {
