@@ -1,13 +1,15 @@
-import HeroSection from "@/components/organisms/heroSection/HeroSection"
-import LatestPostsSection from "@/components/organisms/latestPostsSection/LatestPostsSection"
-import AboutABlogSection from "@/components/organisms/aboutABlog/AboutABlogSection"
+import HeroSection from "@/components/pages/homePage/heroSection/HeroSection"
+import LatestPostsSection from "@/components/pages/homePage/latestPostsSection/LatestPostsSection"
+import AboutABlogSection from "@/components/pages/homePage/aboutABlog/AboutABlogSection"
+import { getPostMetadata } from "@/utils/getPost";
 
 const HomePage = () => {
+  const postMetadata = getPostMetadata();
 
   return (
     <main>
       <HeroSection />
-      <LatestPostsSection />
+      <LatestPostsSection postMetadata={postMetadata} />
       <AboutABlogSection />
     </main>
   )

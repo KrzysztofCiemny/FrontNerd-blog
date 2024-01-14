@@ -14,6 +14,6 @@ export interface LogoBody {
 }
 
 export interface MobileMenuOpen {
-  isMenuOpen: Boolean,
-  setIsMenuOpen: React.Dispatch<React.SetStateAction<boolean>>
+  isMenuOpen: Boolean;
+  setIsMenuOpen: React.Dispatch<React.SetStateAction<boolean>>;
 }

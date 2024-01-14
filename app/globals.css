@@ -38,4 +38,13 @@
   .img-highlight {
     @apply hover:opacity-90 transition-opacity duration-300
   }
+  .scale-animation {
+    @apply hover:scale-110 transition-all
+  }
+  .reveal {
+    @apply relative translate-y-6 opacity-0 transition-all duration-700
+  }
+  .reveal.active {
+    @apply translate-y-0 opacity-100
+  }
 }

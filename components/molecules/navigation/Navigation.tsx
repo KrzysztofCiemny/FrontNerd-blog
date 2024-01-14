@@ -26,6 +26,12 @@ const Navigation = ({ isMenuOpen, setIsMenuOpen }: MobileMenuOpen) => {
           </Link>
           <div className="nav-link_bottom-line"></div>
         </li>
+        <li className="group nav-link_container">
+          <Link href="/o-mnie" className="nav-link" onClick={() => setIsMenuOpen(false)}>
+            O mnie
+          </Link>
+          <div className="nav-link_bottom-line"></div>
+        </li>
       </ul>
     </nav>
   )
