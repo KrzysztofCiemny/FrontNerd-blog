@@ -16,14 +16,14 @@ const FirstProjectSection = () => {
                 Proponuję zagrać, mojej 6-letniej siostrze bardzo się podoba 😄
               </p>
             </div>
-            <Link href='https://github.com/KrzysztofCiemny/Memory'>
+            <Link href='https://github.com/KrzysztofCiemny/Memory' target="_blank">
               <div className="flex items-center gap-3">
                 <Image src='/images/socials/github.svg' alt="github logo" width={20} height={20} className="scale-animation" />
               </div>
             </Link>
           </div>
-          <Link href='https://krzysztofciemny.github.io/Memory/' className="xl:max-w-[41.25rem] xl:order-2 reveal">
-            <Image src='/images/aboutMe/Memory-snap.png' alt='picture of memory game' width={1299} height={841} priority={true} className="rounded-lg h-auto xl:max-w-[41.25rem] img-highlight" />
+          <Link href='https://krzysztofciemny.github.io/Memory/' className="xl:max-w-[41.25rem] xl:order-2 reveal" target="_blank">
+            <Image src='/images/aboutMe/Memory-snap.png' alt='picture of memory game' width={1299} height={841} priority={true} className="rounded-lg h-auto xl:max-w-[41.25rem] img-highlight shadow-imageShadow" />
           </Link>
         </div>
       </div>

@@ -30,7 +30,7 @@ const LatestPostSection = ({ postMetadata }: Props) => {
       <Link href={`/posts/${latestPostMetadata.slug}`} className="max-w-full lg:max-w-[41.25rem] reveal">
         <picture>
           <source srcSet={latestPostMetadata.images[1]} media="(max-width: 992px)" />
-          <Image src={latestPostMetadata.images[0]} alt={latestPostMetadata.alt} width={1320} height={1640} priority={true} className="rounded-lg h-auto img-highlight" />
+          <Image src={latestPostMetadata.images[0]} alt={latestPostMetadata.alt} width={1320} height={1640} priority={true} className="rounded-lg h-auto img-highlight shadow-imageShadow" />
         </picture>
       </Link>
     </section>
