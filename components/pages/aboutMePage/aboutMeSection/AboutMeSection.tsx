@@ -17,16 +17,16 @@ const AboutMeSection = () => {
         <div className="flex flex-col lg:max-w-3xl pb-5 lg:pb-desktopY reveal">
           <h1 className="text-aboutMeTitleClamp font-bold mb-4 leading-tight">Cześć! Jestem Krzysztof</h1>
           <p className="text-slate-700 mb-4 lg:mb-6 leading-relaxed">
-            Jestem frontend developerem i aktualnie pracuję w <Link href="https://publicislepont.com/" className="font-semibold underline"> Publicis&nbsp;Le&nbsp;Pont</Link>.
-            Programowaniem zajmuję się od około 4 lat. W tym czasie zdążyłem poznać kilka technologii frontendowych.
-            Mój aktualny tech stack to typescript, next i tailwind, ale z tyłu głowy zawsze mam vue, z którym rozpocząłęm swoją zawodową przygodę.
+            Jestem frontend developerem i aktualnie pracuję w <Link href="https://publicislepont.com/" className="font-semibold underline" target="_blank"> Publicis&nbsp;Le&nbsp;Pont</Link>.
+            Programowaniem zajmuję się od około 4 lat. W tym czasie zdążyłem poznać kawałek świata frontendu.
+            Na ten moment bliżej mi do Reacta/Nexta, ale z tyłu głowy zawsze mam Vue, z którym rozpocząłem swoją zawodową przygodę.
           </p>
           <p className="text-slate-700 mb-4 lg:mb-6 leading-relaxed">
-            Poza byciem frontnerdem lubię grać na gitarze elektrycznej i w koszykówkę ze znajomymi.
+            Poza byciem Frontnerdem lubię grać na gitarze elektrycznej i w koszykówkę ze znajomymi.
             Wracam też czasami do gierek z dzieciństwa takich jak Tibia czy Lol.
           </p>
           <p className="text-slate-700 mb-4 lg:mb-6 leading-relaxed">
-            Więcej można dowiedzieć się na moich socialach.
+            Więcej można dowiedzieć się na moich socialach. 😋
           </p>
           <Socials />
         </div>

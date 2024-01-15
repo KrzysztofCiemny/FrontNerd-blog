@@ -36,14 +36,14 @@ const AllArticlesSection = ({ postMetadata }: Props) => {
         {filteredPosts.map(post => {
           return (
             <li key={post.slug}>
-              <article className="flex flex-col">
-                <Link href={`/posts/${post.slug}`} className="reveal">
+              <article className="flex flex-col reveal">
+                <Link href={`/posts/${post.slug}`}>
                   <h3 className="text-[1.8rem] font-semibold mb-4 leading-tight text-color-hover-animation">{post.title}</h3>
                 </Link>
-                <Link href={`/posts/${post.slug}`} className="-order-1 reveal">
-                  <Image src={post.images[2]} alt={post.alt} width={1680} height={1200} className="rounded-lg h-auto mb-6 img-highlight" />
+                <Link href={`/posts/${post.slug}`} className="-order-1">
+                  <Image src={post.images[2]} alt={post.alt} width={1680} height={1200} className="rounded-lg h-auto mb-6 img-highlight shadow-imageShadow" />
                 </Link>
-                <p className="text-slate-700 lg:text-lg leading-8 reveal">{post.description} </p>
+                <p className="text-slate-700 lg:text-lg leading-8">{post.description} </p>
               </article>
             </li>
           )

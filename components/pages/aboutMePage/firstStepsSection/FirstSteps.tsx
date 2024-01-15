@@ -7,7 +7,7 @@ const FirstStepsSection = () => {
       <div className="content-max-width flex justify-center flex-col pt-mobileY lg:py-desktopY_Xl pb-16 px-mobileX lg:px-desktopX">
         <h2 className="text-postTitleH2Clamp font-bold mb-6 lg:mb-16 leading-tight reveal">Pierwsze kroki</h2>
         <div className="flex flex-col lg:flex-row justify-center items-center gap-8 xl:gap-16 reveal">
-          <Image src='/images/aboutMe/FirstSteps.png' alt='picture of first steps' width={410} height={410} priority={true} className="max-w-[50px] lg:max-w-none" />
+          <Image src='/images/aboutMe/FirstSteps.png' alt='picture of first steps' width={410} height={410} priority={true} className="max-w-[3.125rem] lg:max-w-none h-auto" />
           <div>
             <p className="mb-4 lg:mb-6 leading-relaxed">
               Nie jestem z tych ludzi, którzy byli zajarani kodem od dziecka. W moim życiu programowanie pojawiło się w chwili gdy zacząłem szukać dla siebie

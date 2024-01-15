@@ -42,6 +42,9 @@ module.exports = {
         heroPClamp: "clamp(1.2rem, 2vw, 1.4rem)",
         postPClamp: "clamp(1rem, 2vw, 1.2rem)",
       },
+      boxShadow: {
+        imageShadow: "1px 2px 6px -1px rgba(95, 102, 109, 1);",
+      },
       keyframes: {
         slide: {
           from: { transform: "translateX(0)" },
