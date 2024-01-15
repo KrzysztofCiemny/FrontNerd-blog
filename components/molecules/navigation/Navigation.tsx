@@ -1,6 +1,7 @@
 import { useEffect } from "react";
 import Link from "next/link"
 import { MobileMenuOpen } from "@/models/models"
+import Socials from "@/components/atoms/socials/Socials";
 
 const Navigation = ({ isMenuOpen, setIsMenuOpen }: MobileMenuOpen) => {
   useEffect(() => {
@@ -12,8 +13,8 @@ const Navigation = ({ isMenuOpen, setIsMenuOpen }: MobileMenuOpen) => {
   }, [isMenuOpen]);
 
   return (
-    <nav className={`flex justify-center items-center z-[9] mobileMax:mobile-nav md:translate-x-0 ${isMenuOpen ? 'translate-x-0' : 'translate-x-[100vw]'}`}>
-      <ul className="flex flex-col gap-6 md:flex-row">
+    <nav className={`flex flex-col md:flex-row justify-between md:justify-center items-center pt-32 pb-20 md:py-0 z-[9] mobileMax:mobile-nav md:translate-x-0 ${isMenuOpen ? 'translate-x-0' : 'translate-x-[100vw]'}`}>
+      <ul className="flex flex-col items-center gap-6 md:flex-row">
         <li className="group nav-link_container md:hidden">
           <Link href="/" className="nav-link" onClick={() => setIsMenuOpen(false)}>
             Strona główna
@@ -33,6 +34,9 @@ const Navigation = ({ isMenuOpen, setIsMenuOpen }: MobileMenuOpen) => {
           <div className="nav-link_bottom-line"></div>
         </li>
       </ul>
+      <div className="md:hidden">
+        <Socials />
+      </div>
     </nav>
   )
 }
