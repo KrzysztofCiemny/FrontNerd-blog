@@ -2,7 +2,7 @@
 title: "Vue vs React: który framework wybrać na początek? Porównanie."
 description: W tym artykule porównamy sobie dwa najpopularniejsze frameworki frontendowe. Sprawdzimy, który z nich najlepiej nadaje się na początek przygody z programowaniem, a także zobaczymy sobie podobieństwa i różnice między nimi.
 category: Inne
-date: 2023-10-17
+date: 2023-12-21
 author: Krzysztof Ciemny
 images:
   [

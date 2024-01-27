@@ -8,8 +8,12 @@ import Script from "next/script"
 const rubik = Rubik({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-  title: 'Frontnerd',
-  description: 'Blog about front-end development',
+  title: { default: "Frontnerd", template: "%s | Frontnerd" },
+  description: 'Frontnerd to blog o programowaniu frontendowym i miejsce dla wszystkich pasjonatów frontendu.',
+  applicationName: 'Frontnerd',
+  authors: [{ name: 'Krzysztof Ciemny', url: 'https://www.linkedin.com/in/krzysztofciemny/' }],
+  creator: 'Krzysztof Ciemny',
+  keywords: ['Frontend', 'Front-end', 'Programming', 'Next.js', 'React', 'JavaScript', 'Vue', 'Typescript', 'CSS', 'HTML', 'Tailwind'],
 }
 
 export default async function RootLayout({ children }: {
