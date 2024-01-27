@@ -2,6 +2,7 @@ import { getPostMetadata, getPostContent } from "@/utils/getPost";
 import Markdown from "markdown-to-jsx";
 import Image from "next/image";
 import formatDate from "@/utils/formatDate";
+import { Metadata } from "next";
 
 type PageParams = {
   slug: string;
@@ -10,6 +11,15 @@ type PageProps = {
   params: PageParams;
 };
 
+export async function generateMetadata({ params: { slug } }: PageProps): Promise<Metadata> {
+  const post = getPostContent(slug);
+
+  return {
+    title: post.data.title,
+    description: post.data.description
+  }
+}
+
 export const generateStaticParams = () => {
   const posts = getPostMetadata();
   return posts.map((post) => ({
@@ -17,8 +27,7 @@ export const generateStaticParams = () => {
   }));
 };
 
-const PostPage = ({ params }: PageProps) => {
-  const slug = params.slug;
+const PostPage = ({ params: { slug } }: PageProps) => {
   const post = getPostContent(slug);
 
   if (!post) {
