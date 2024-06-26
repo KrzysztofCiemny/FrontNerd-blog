@@ -1,5 +1,5 @@
 import { MetadataRoute } from "next";
-import { getPostMetadata } from "@/utils/getPost";
+import { getAllPostsMetadata } from "@/utils/getPost";
 
 const defaultUrl = "https://www.frontnerd.pl";
 
@@ -19,7 +19,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
   ];
 
-  const posts = getPostMetadata();
+  const posts = getAllPostsMetadata();
   posts.map((post) => {
     routes.push({
       url: `${defaultUrl}/posts/${post.slug}`,
