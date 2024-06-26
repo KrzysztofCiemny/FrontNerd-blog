@@ -1,6 +1,6 @@
 import LatestPostSection from "@/components/pages/articlesPage/latestPostSection/LatestPostSection"
 import AllArticlesSection from "@/components/pages/articlesPage/allArticlesSection/AllArticlesSection"
-import { getPostMetadata } from "@/utils/getPost"
+import { getAllPostsMetadata } from "@/utils/getPost"
 import { Metadata } from "next"
 
 export const metadata: Metadata = {
@@ -8,13 +8,19 @@ export const metadata: Metadata = {
   description: "W tym miejscu możesz znaleźć wiele przydatnej wiedzy, gdyż znajdują się tu wszystkie artykuły Frontnerdu."
 }
 
+const styles = {
+  pageWrapper: 'flex justify-center pt-2 lg:pt-mobileY px-mobileX md:px-desktopX',
+  sectionsContainer: 'content-max-width flex-col'
+}
+const {pageWrapper, sectionsContainer} = styles
+
 const AllPosts = () => {
-  const postMetadata = getPostMetadata();
+  const allPostsMetadata = getAllPostsMetadata();
   return (
-    <main className="flex justify-center pt-2 lg:pt-mobileY px-mobileX md:px-desktopX">
-      <div className="content-max-width flex-col">
-        <LatestPostSection postMetadata={postMetadata} />
-        <AllArticlesSection postMetadata={postMetadata} />
+    <main className={pageWrapper}>
+      <div className={sectionsContainer}>
+        <LatestPostSection allPostsMetadata={allPostsMetadata} />
+        <AllArticlesSection allPostsMetadata={allPostsMetadata} />
       </div>
     </main>
   )

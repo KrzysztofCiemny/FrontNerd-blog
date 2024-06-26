@@ -1,8 +1,15 @@
 import Link from "next/link"
+import { PageLinkProps } from "@/models/models"
 
-const PageLink = ({ children, to, dark }: any) => {
+
+const PageLink = ({ children, to, dark }: PageLinkProps) => {
+  const styles = {
+    link: `flex items-center gap-3 group no-underline tracking-wide font-medium cursor-pointer z-[3] max-w-[15rem] ${dark ? 'text-black' : 'text-white'}`,
+  }
+  const {link} = styles
+  
   return (
-    <Link href={to} className={`flex items-center gap-3 group no-underline tracking-wide font-medium cursor-pointer z-[3] max-w-[15rem] ${dark ? 'text-black' : 'text-white'}`}>
+    <Link href={to} className={link}>
       {children}
       <svg className="group-hover:translate-x-2 ease-in duration-200" width="1.6rem" height="1.6rem" viewBox="0 -5 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg">
         <title>arrow_right [#365]</title>

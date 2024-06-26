@@ -1,5 +1,5 @@
-const formatDate = (date: any) => {
-  const options = { year: "numeric", month: "long", day: "numeric" };
+const formatDate = (date: Date) => {
+  const options: Intl.DateTimeFormatOptions = { year: "numeric", month: "long", day: "numeric" };
   return date.toLocaleDateString("pl-PL", options);
 };
 

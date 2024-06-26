@@ -1,4 +1,4 @@
-export interface PostMetadata {
+export type PostMetadata = {
   title: string;
   description: string;
   date: string;
@@ -8,12 +8,22 @@ export interface PostMetadata {
   category: string;
 }
 
-export interface LogoBody {
+export type AllPostsMetadata = {
+  allPostsMetadata: PostMetadata[];
+}
+
+export type LogoBody = {
   path: string;
   alt: string;
 }
 
-export interface MobileMenuOpen {
+export type MobileMenuOpen = {
   isMenuOpen: Boolean;
   setIsMenuOpen: React.Dispatch<React.SetStateAction<boolean>>;
+}
+
+export type PageLinkProps = {
+  children: React.ReactNode,
+  to: string,
+  dark: boolean
 }
