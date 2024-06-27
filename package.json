@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "gray-matter": "^4.0.3",
+    "kbar": "^0.1.0-beta.45",
     "markdown-to-jsx": "^7.2.1",
     "next": "^14.1.0",
     "react": "^18.2.0",
