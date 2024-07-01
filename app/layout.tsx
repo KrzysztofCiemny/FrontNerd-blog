@@ -4,7 +4,7 @@ import { Rubik } from 'next/font/google';
 import PageHeader from '@/components/organisms/pageHeader/PageHeader';
 import PageFooter from '@/components/organisms/pageFooter/PageFooter';
 import Script from 'next/script';
-import { AppContextClientProvider } from '@/context/appContextClientProvider';
+import { AppContextClientProvider } from '@/context/AppContextClientProvider';
 import { getAllPostsMetadata } from '@/utils/getPost';
 
 const rubik = Rubik({ subsets: ['latin'] });
