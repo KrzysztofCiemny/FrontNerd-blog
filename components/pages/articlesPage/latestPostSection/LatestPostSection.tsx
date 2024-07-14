@@ -1,11 +1,11 @@
-"use client"
+'use client';
 
-import PageLink from "@/components/atoms/pageLink/PageLink"
-import Image from "next/image"
-import Link from "next/link"
-import { AllPostsMetadata } from "@/models/models"
-import { useEffect } from "react"
-import revealElementsOnScroll from "@/utils/scrollAnimations"
+import PageLink from '@/components/pageLink/PageLink';
+import Image from 'next/image';
+import Link from 'next/link';
+import { useEffect } from 'react';
+import revealElementsOnScroll from '@/utils/scrollAnimations';
+import { useAppContext } from '@/context/appContext';
 
 const postsDirectory = '/posts/';
 
@@ -16,15 +16,16 @@ const styles = {
   titleStyles: 'text-postTitleH2Clamp font-bold mb-4 leading-tight text-color-hover-animation',
   image: 'rounded-lg h-auto img-highlight shadow-imageShadow',
   link: 'max-w-full lg:max-w-[41.25rem] reveal',
-}
-const {sectionStyles, container, paragraph, titleStyles, image, link} = styles
+};
+const { sectionStyles, container, paragraph, titleStyles, image, link } = styles;
 
-const LatestPostSection = ({ allPostsMetadata }: AllPostsMetadata) => {
+const LatestPostSection = () => {
+  const allPostsMetadata = useAppContext();
   const [latestPostMetadata] = allPostsMetadata;
   const { title, slug, description, images, alt } = latestPostMetadata;
 
   useEffect(() => {
-    revealElementsOnScroll()
+    revealElementsOnScroll();
   }, []);
 
   return (
@@ -34,16 +35,25 @@ const LatestPostSection = ({ allPostsMetadata }: AllPostsMetadata) => {
           <h3 className={titleStyles}>{title}</h3>
         </Link>
         <p className={paragraph}>{description}</p>
-        <PageLink to={`${postsDirectory}${slug}`} dark>Przeczytaj post</PageLink>
+        <PageLink to={`${postsDirectory}${slug}`} dark>
+          Przeczytaj post
+        </PageLink>
       </div>
       <Link href={`${postsDirectory}${slug}`} className={link}>
         <picture>
           <source srcSet={images[1]} media="(max-width: 992px)" />
-          <Image src={images[0]} alt={alt} width={1320} height={1640} priority={true} className={image} />
+          <Image
+            src={images[0]}
+            alt={alt}
+            width={1320}
+            height={1640}
+            priority={true}
+            className={image}
+          />
         </picture>
       </Link>
     </section>
-  )
-}
+  );
+};
 
-export default LatestPostSection
+export default LatestPostSection;

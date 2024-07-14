@@ -9,7 +9,9 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "focus-trap-react": "^10.2.3",
     "gray-matter": "^4.0.3",
+    "kbar": "^0.1.0-beta.45",
     "markdown-to-jsx": "^7.2.1",
     "next": "^14.1.0",
     "react": "^18.2.0",
@@ -24,6 +26,7 @@
     "eslint": "8.45.0",
     "eslint-config-next": "13.4.10",
     "postcss": "^8.4.26",
+    "prettier": "^3.3.2",
     "tailwindcss": "^3.3.3",
     "typescript": "5.1.6"
   },

@@ -1,6 +1,6 @@
-import PostPreviewCard from "@/components/molecules/postPreviewCard/PostPreviewCard";
-import PageLink from "@/components/atoms/pageLink/PageLink";
-import { AllPostsMetadata } from "@/models/models";
+import PostPreviewCard from '@/components/postPreviewCard/PostPreviewCard';
+import PageLink from '@/components/pageLink/PageLink';
+import { getAllPostsMetadata } from '@/utils/getPost';
 
 const styles = {
   sectionStyles: 'relative flex justify-center px-mobileX lg:px-desktopX',
@@ -8,10 +8,11 @@ const styles = {
   postsContainer: 'grid grid-cols-1 md:grid-cols-3 gap-x-6 gap-y-8 mb-mobileY',
   paragraph: 'max-w-md text-heroPClamp text-slate-500 reveal',
   title: 'md:self-start font-medium text-sm uppercase mb-2 z-[3] reveal',
-}
-const {sectionStyles, container, postsContainer, title} = styles
+};
+const { sectionStyles, container, postsContainer, title } = styles;
 
-const LatestPostsSection = ({ allPostsMetadata }: AllPostsMetadata) => {
+const LatestPostsSection = () => {
+  const allPostsMetadata = getAllPostsMetadata();
   const latestThreePostsMetadata = allPostsMetadata.slice(0, 3);
 
   return (
@@ -19,17 +20,16 @@ const LatestPostsSection = ({ allPostsMetadata }: AllPostsMetadata) => {
       <div className={container}>
         <h2 className={title}>Ostatnie Artykuły</h2>
         <div className={postsContainer}>
-          {latestThreePostsMetadata.map(post => {
-            return (
-              <PostPreviewCard key={post.slug} {...post} />
-            )
+          {latestThreePostsMetadata.map((post) => {
+            return <PostPreviewCard key={post.slug} {...post} />;
           })}
-
         </div>
-        <PageLink to="/posts" dark>Zobacz wszystkie posty</PageLink>
+        <PageLink to="/posts" dark>
+          Zobacz wszystkie posty
+        </PageLink>
       </div>
     </section>
-  )
-}
+  );
+};
 
-export default LatestPostsSection
+export default LatestPostsSection;
