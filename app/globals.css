@@ -6,45 +6,57 @@
   *,
   *:before,
   *:after {
-    @apply box-border m-0 p-0
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
   }
   p {
-    @apply tracking-wide
+    letter-spacing: 0.025em;
   }
   .text-color-hover-animation {
     -webkit-text-fill-color: transparent;
+  }
+  .no-scrollbar * {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
   }
 }
 
 @layer components {
   .mobile-nav {
-    @apply fixed top-0 left-0 w-screen h-screen transition-transform ease-in bg-lightBlue
+    @apply fixed top-0 left-0 w-screen h-screen transition-transform ease-in bg-lightBlue;
   }
   .nav-link {
-    @apply no-underline text-xl md:text-base tracking-wide font-semibold md:font-normal md:text-slate-600 hover:text-black ease-in duration-200
+    @apply no-underline text-xl md:text-base tracking-wide font-semibold md:font-normal md:text-slate-600 hover:text-black ease-in duration-200;
   }
   .nav-link_bottom-line {
-    @apply absolute -bottom-1 left-0 w-0 h-px bg-darkBlue group-hover:w-full ease-in duration-200
+    @apply absolute -bottom-1 left-0 w-0 h-px bg-darkBlue group-hover:w-full ease-in duration-200;
   }
   .nav-link_container {
-    @apply relative px-2 cursor-pointer
+    @apply relative px-2 cursor-pointer;
   }
   .content-max-width {
-    @apply flex items-center max-w-maxContent w-full
+    @apply flex items-center max-w-maxContent w-full;
   }
   .text-color-hover-animation {
-    @apply relative overflow-hidden bg-title-hover-color bg-clip-text bg-[length:200%_100%] bg-[100%] transition-all duration-[400ms] hover:bg-[0_100%]
+    @apply relative overflow-hidden bg-title-hover-color bg-clip-text bg-[length:200%_100%] bg-[100%] transition-all duration-[400ms] hover:bg-[0_100%];
   }
   .img-highlight {
-    @apply hover:opacity-90 transition-opacity duration-300
+    @apply hover:opacity-90 transition-opacity duration-300;
   }
   .scale-animation {
-    @apply hover:scale-110 transition-all
+    @apply hover:scale-110 transition-all;
   }
   .reveal {
-    @apply relative translate-y-6 opacity-0 transition-all duration-700
+    @apply relative translate-y-6 opacity-0 transition-all duration-700;
   }
   .reveal.active {
-    @apply translate-y-0 opacity-100
+    @apply translate-y-0 opacity-100;
+  }
+  .no-scrollbar {
+    @apply p-0;
   }
 }
