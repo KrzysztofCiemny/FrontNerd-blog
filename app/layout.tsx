@@ -36,16 +36,6 @@ export default async function RootLayout({ children }: { children: React.ReactNo
 
   return (
     <html lang="pl">
-      <Script async src="https://www.googletagmanager.com/gtag/js?id=G-TVFN3DJ8T8"></Script>
-      <Script id="google-analytics">
-        {`
-          window.dataLayer = window.dataLayer || [];
-          function gtag(){dataLayer.push(arguments);}
-          gtag('js', new Date());
-
-          gtag('config', 'G-TVFN3DJ8T8');
-        `}
-      </Script>
       <body className={`${rubik.className} bg-lightBlue text-black min-h-screen`}>
         <AppContextClientProvider posts={posts}>
           <Header />
